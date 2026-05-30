@@ -50,7 +50,7 @@ import spiderman from "../assets/spiderman.jpeg";
 import spiderman2 from "../assets/spiderman2.jpeg";
 import teddy from "../assets/teddy.jpeg";
 
-import "./images.css";
+import "./Images.css";
 
 const images = [
   ayush,
