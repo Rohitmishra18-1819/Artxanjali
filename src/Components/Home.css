@@ -1,0 +1,156 @@
+.home-section {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 100px 60px;
+
+  text-align: left;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* Dark Overlay */
+.home-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(117, 37, 37, 0.6);
+}
+
+/* Content upar lane ke liye */
+.home-section h2,
+.home-section p,
+.profile-img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Text Styling */
+.home-section h2,
+.home-section p {
+  max-width: 700px;
+
+  color: #f1f1f1;
+
+  transition: all 0.5s ease;
+
+  cursor: pointer;
+}
+
+/* Heading */
+.home-section h2 {
+  font-size: 50px;
+
+  margin-bottom: 20px;
+
+  font-weight: bold;
+}
+
+/* Paragraph */
+.home-section p {
+  font-size: 30px;
+
+  line-height: 1.9;
+
+  color: #dddddd;
+}
+
+/* Paragraph Hover */
+.home-section p:hover {
+  color: #ff9800;
+
+  transform: scale(1.03);
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 10px #ff9800,
+    0 0 20px #ff9800,
+    0 0 40px #ff9800;
+
+  filter: brightness(1.2);
+}
+
+/* Heading Hover */
+.home-section h2:hover {
+  color: #ff9800;
+
+  transform: scale(1.05);
+
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 0 5px hsl(22, 84%, 43%),
+    0 0 10px #836e4e,
+    0 0 15px #c7a777;
+
+  filter: brightness(1.2);
+}
+
+/* Profile Image */
+.profile-img {
+  width:600px;
+  height:500px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 5px solid rgb(241, 236, 236);
+
+  box-shadow:
+    0 0 20px rgba(228, 10, 10, 0.4),
+    0 0 40px rgba(255, 152, 0, 0.5);
+
+  transition: all 0.5s ease;
+
+  cursor: pointer;
+}
+
+/* Image Hover */
+.profile-img:hover {
+  transform: scale(1.08) rotate(3deg);
+
+  box-shadow:
+    0 0 25px rgba(204, 3, 3, 0.6),
+    0 0 50px rgba(255, 30, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .home-section {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 40px;
+
+    padding: 120px 20px;
+  }
+
+  .profile-img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .home-section h2 {
+    font-size: 38px;
+  }
+
+  .home-section p {
+    font-size: 18px;
+  }
+}

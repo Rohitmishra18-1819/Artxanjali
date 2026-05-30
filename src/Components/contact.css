@@ -1,0 +1,139 @@
+.contact-section {
+  min-height: 100vh;
+
+  padding: 100px 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f0c29,
+      #302b63,
+      #24243e
+    );
+}
+
+/* Glowing Background Effects */
+.contact-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(255, 152, 0, 0.15);
+
+  border-radius: 50%;
+
+  top: -150px;
+  left: -150px;
+
+  filter: blur(100px);
+}
+
+.contact-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  bottom: -120px;
+  right: -120px;
+
+  filter: blur(100px);
+}
+
+/* Heading */
+.contact-section h1 {
+  position: relative;
+  z-index: 1;
+
+  font-size: 60px;
+
+  color: #ff9800;
+
+  margin-bottom: 40px;
+
+  text-shadow:
+    0 0 10px #ff9800,
+    0 0 20px #795723,
+    0 0 40px #7c5315;
+}
+
+/* Links */
+.contact-section a {
+  position: relative;
+  z-index: 1;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  width: 320px;
+
+  padding: 18px 30px;
+
+  border: 1px solid #ff9800;
+  border-radius: 18px;
+
+  background: rgba(182, 24, 24, 0.05);
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.4s ease;
+
+  box-shadow:
+    0 0 15px rgba(255, 152, 0, 0.2);
+}
+
+/* Hover */
+.contact-section a:hover {
+  background: #ff9800;
+
+  color: black;
+
+  transform: translateY(-5px) scale(1.05);
+
+  box-shadow:
+    0 0 20px #ff9800,
+    0 0 40px #ff9800,
+    0 0 60px #ff9800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section h1 {
+    font-size: 42px;
+  }
+
+  .contact-section a {
+    width: 90%;
+
+    font-size: 20px;
+
+    padding: 15px 20px;
+  }
+}
